@@ -1,0 +1,30 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("/assets/lib2.jpg");
+    background-size: cover;
+}
+h2{
+    margin-top: 9%;
+    padding-top: 1%;
+    background-color: black;
+}
+
+.dash-board{
+padding-top: 3%;
+}
+.footer {
+    position: absolute;
+    bottom: 10px;
+    width:100%;
+    height: 70px;
+    background-image: blue;
+    text-align: center;
+    color: white;
+}

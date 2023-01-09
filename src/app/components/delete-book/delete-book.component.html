@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <app-navigation-bar></app-navigation-bar>
+    <div class="search-box">
+    
+        <button class="btn-search"><i class="bi bi-search"></i></button>
+        
+        <input type="text" class="input-search" placeholder="Type to Search..." [(ngModel)]="searchName">
+      </div>
+<div class = "table-wrapper">
+    <h2 > Book List</h2>
+
+
+<table class = "fl-table">
+    <thead>
+        
+        <tr>
+            <th>Book Id</th>
+            <th> Book Name</th>
+            <th> Author Name </th>
+            <th> Price </th>
+          
+            <th> Availability </th>
+            <th> Shop Name </th>
+
+            <th> Contact Number </th>
+            <th>Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let book of books| searchBook:searchName" >
+            
+            <td> {{ book.bookId }} </td>
+            <td> {{ book.bookName }} </td>
+            <td> {{ book.authorName }} </td>
+            <td> {{ book.price }} </td>
+            <td> {{ book.availableQuantity }} </td>
+            <td> {{ book.shopName }} </td>
+            <td> {{ book.contactNumber }} </td>
+            <td> 
+                <!-- <a href="/delete-book" > -->
+                        <!-- <button  class = "btn-btn-danger"><span>Hover Me!</span></button> -->
+                        <button  (click) = "deleteBook(book.bookId,book.contactNumber)" class="button-82-pushable" role="button">
+                            <span class="button-82-shadow"></span>
+                            <span class="button-82-edge"></span>
+                            <span class="button-82-front text">
+                           Delete
+                            </span>
+                          </button>
+            <!-- </a> -->
+            <!-- <button [swal]="deleteSwal" (confirm)="deleteFile(file)">
+                
+              </button>
+              
+              <swal #deleteSwal ...></swal> -->
+        </td>
+            
+                <!-- <td>
+                <button (click) = "updateBook(book.bookId)" class = "btn btn-primary"> Update</button>
+                <button (click) = "deleteBook(book.bookId)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "bookDetail(book.bookId)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+            </td> -->
+        </tr>
+    </tbody>
+</table>
+
+</div>
+</body>
+</html>

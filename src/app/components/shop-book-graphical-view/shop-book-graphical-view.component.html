@@ -1,0 +1,59 @@
+<!-- <app-user-home-page-navigation-bar></app-user-home-page-navigation-bar> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div class="search-box">
+    
+    <button class="btn-search"><i class="bi bi-search"></i></button>
+    
+    <input type="text" class="input-search" placeholder="Type to Search..." [(ngModel)]="searchName">
+  </div>
+
+  <div class="container" *ngFor="let book of books| searchBook:searchName">
+    <div class="card">
+      <div class="box">
+        <div class="content">
+
+          <h2>₹ {{ book.price }}</h2><br>
+          <h3> {{ book.bookName }}</h3><br>
+
+
+
+
+
+
+
+
+
+
+
+          <p>Book Id:: {{ book.bookId }}</p><br>
+
+
+          <p> Author Name :: {{ book.authorName }} </p><br>
+          <p>Price :: {{ book.price }} </p><br>
+          <p> Availability :: {{ book.availableQuantity }} </p><br>
+          <p> Shop Name :: {{ book.shopName }} </p><br>
+          <!-- <p> ContactNumber :: {{ book.contactNumber }} </p><br> -->
+          <!-- 
+                <button (click) = "updateBook(book.bookId)" class = "btn btn-primary"> Update</button>
+                <button (click) = "deleteBook(book.bookId)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "bookDetail(book.bookId)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+            < -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

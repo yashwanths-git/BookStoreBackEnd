@@ -1,0 +1,35 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("/assets/lib2.jpg");
+    background-size: cover;
+   
+    height: 127.5%;
+    width: 1241px;
+    margin-left: -7px;
+ overflow: scroll;
+  
+}
+h2{
+
+    background-color: black;
+}
+
+.list{
+padding-top: 10%;
+}
+.footer {
+    position: absolute;
+    bottom: 10px;
+    width:100%;
+    height: 70px;
+    background-image: blue;
+    text-align: center;
+    color: white;
+}
